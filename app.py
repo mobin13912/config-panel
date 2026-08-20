@@ -18,9 +18,7 @@ from werkzeug.security import generate_password_hash
 
 app = Flask(__name__)
 
-app.secret_key = os.environ.get(
-    "FLASK_SECRET_KEY",
-    secrets.token_hex(32)
+app.secret_key = os.environ.get("FLASK_SECRET_KEY")
 )
 
 DATABASE = "users.db"
